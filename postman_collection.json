@@ -1,0 +1,29 @@
+{
+  "info": {
+    "name": "URL Shortener API",
+    "_postman_id": "d4e5f6a7-b8c9-0123-4567-890123456789",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Shorten URL",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"url\": \"https://example.com/some/very/long/link\"}"
+        },
+        "url": "{{baseUrl}}/url"
+      }
+    },
+    {
+      "name": "Redirect URL",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/url/:code"
+      }
+    }
+  ],
+  "variable": [{ "key": "baseUrl", "value": "http://localhost:8001" }]
+}
