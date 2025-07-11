@@ -42,7 +42,7 @@ This is a backend API for a URL shortening service, built for the Oro Backend In
 
 ## Features
 - ✔️**URL Validation**: Uses `validator.isURL` to ensure valid URLs.
-- **Rate Limiting**: Limits to 100 requests per 15 minutes using `express-rate-limit`.
+- 💼**Rate Limiting**: Limits to 100 requests per 15 minutes using `express-rate-limit`.
 - 📑**Click Tracking**: Stores visit timestamps in MongoDB (`visitHistory`).
 - ⌚**Expiration**: URLs expire after 10 days (`expiresAt`).
 
@@ -77,7 +77,7 @@ This is a backend API for a URL shortening service, built for the Oro Backend In
 - nodemon@3.1.10
 - validator@13.15.15
 
-## Notes:shipit:
+## Notes:
 - The `.env` file is excluded via `.gitignore` for security.
 - The API has been tested with Postman and `mongosh`, confirming all features work as expected.
 - For rate limiting, send 101 POST requests to trigger a `429 Too Many Requests` response.
